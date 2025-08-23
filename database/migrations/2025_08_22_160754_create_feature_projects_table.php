@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('feature_projects', function (Blueprint $table) {
             $table->id();
             $table->foreignId('project_id')->constrained()->cascadeOnDelete();
-            $table->string('name')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();

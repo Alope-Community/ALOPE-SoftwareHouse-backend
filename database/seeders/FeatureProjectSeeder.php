@@ -16,25 +16,21 @@ class FeatureProjectSeeder extends Seeder
         $featureProjects = [
             [
                 'project_id' => 1,
-                'name' => 'Cool Design',
                 'image' => '/img/project/card_nuteam1.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
             [
                 'project_id' => 2,
-                'name' => 'Fantastic Design',
                 'image' => '/img/project/card_nuteam2.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
             [
                 'project_id' => 3,
-                'name' => 'Awesome Design',
                 'image' => '/img/project/card_nuteam2.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
             [
                 'project_id' => 4,
-                'name' => 'Wonderful Design',
                 'image' => '/img/project/card_nuteam2.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
