@@ -11,22 +11,26 @@ class Mapped
     {
         return [
             'id' => $project->id,
-            'name' => $project->name,
-            'description' => $project->description,
-            'abouts' => $project->aboutProjects->map(fn($about) => [
-                'image' => $about->image,
-                'description' => $about->description,
-            ]),
-            'features' => $project->featureProjects->map(fn($feature) => [
-                'name' => $feature->name,
-                'image' => $feature->image,
-                'description' => $feature->description,
-            ]),
-            'stacks' => $project->stackProjects->map(fn($stack) => [
-                'name' => $stack->name,
-                'image' => $stack->image,
-                'description' => $stack->description,
-            ]),
+            'title' => $project->title,
+            'image' => $project->image,
+            'project_info' => [
+                'client' => $project->projectInfo->client,
+                'platform' => $project->projectInfo->platform,
+                'timeline' => $project->projectInfo->timeline,
+                'url' => $project->projectInfo->url,
+            ],
+            'about' => [
+                'image' => $project->aboutProject->image,
+                'description' => $project->aboutProject->description,
+            ],
+            'feature' => [
+                'image' => $project->featureProject->image,
+                'description' => $project->featureProject->description,
+            ],
+            'stack' => [
+                'image' => $project->stackProject->image,
+                'description' => $project->stackProject->description,
+            ],
             'created_at' => $project->created_at->toDateTimeString(),
         ];
     }

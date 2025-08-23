@@ -14,7 +14,7 @@ class ProjectController extends Controller
     public function index()
     {
         try {
-            $projects = Project::with(['aboutProjects', 'featureProjects', 'stackProjects'])->latest()->paginate(5);
+            $projects = Project::with(['aboutProject', 'featureProject', 'stackProject'])->latest()->paginate(5);
 
             $projects->getCollection()->transform(function ($project) {
                 return Mapped::projectMap($project);
@@ -32,7 +32,7 @@ class ProjectController extends Controller
     public function show($id)
     {
         try {
-            $project = Project::with(['aboutProjects', 'featureProjects', 'stackProjects'])->find($id);
+            $project = Project::with(['aboutProject', 'featureProject', 'stackProject'])->find($id);
 
             if (!$project) {
                 return ApiResponse::error('Project Not Found', null, 404);
