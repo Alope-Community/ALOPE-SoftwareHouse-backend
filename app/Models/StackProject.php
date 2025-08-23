@@ -8,7 +8,6 @@ class StackProject extends Model
 {
     protected $fillable = [
         'project_id',
-        'name',
         'image',
         'description',
     ];

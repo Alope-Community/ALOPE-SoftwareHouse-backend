@@ -16,25 +16,21 @@ class StackProjectSeeder extends Seeder
         $stackProjects = [
             [
                 'project_id' => 1,
-                'name' => 'React',
                 'image' => '/img/project/card_nuteam1.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
             [
                 'project_id' => 2,
-                'name' => 'NextJS',
                 'image' => '/img/project/card_nuteam2.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
             [
                 'project_id' => 3,
-                'name' => 'Laravel',
                 'image' => '/img/project/card_nuteam2.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
             [
                 'project_id' => 4,
-                'name' => 'Laravel',
                 'image' => '/img/project/card_nuteam2.png',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             ],
