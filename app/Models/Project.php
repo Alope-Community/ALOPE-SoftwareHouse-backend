@@ -11,18 +11,23 @@ class Project extends Model
         'image',
     ];
 
-    public function aboutProjects()
+    public function projectInfo()
     {
-        return $this->hasMany(AboutProject::class);
+        return $this->hasOne(ProjectInfo::class);
     }
 
-    public function featureProjects()
+    public function aboutProject()
     {
-        return $this->hasMany(FeatureProject::class);
+        return $this->hasOne(AboutProject::class);
     }
 
-    public function stackProjects()
+    public function featureProject()
     {
-        return $this->hasMany(StackProject::class);
+        return $this->hasOne(FeatureProject::class);
+    }
+
+    public function stackProject()
+    {
+        return $this->hasOne(StackProject::class);
     }
 }
