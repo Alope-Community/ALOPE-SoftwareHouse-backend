@@ -118,6 +118,9 @@ class BlogForm
 
                             FileUpload::make('image')
                                 ->image()
+                                ->disk('public')
+                                ->directory('blogs')
+                                ->visibility('public')
                                 ->required(),
 
                             RichEditor::make('content')

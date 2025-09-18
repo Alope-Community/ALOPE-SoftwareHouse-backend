@@ -23,6 +23,8 @@ class ProjectForm
 
                         FileUpload::make('image')
                             ->image()
+                            ->disk('public')
+                            ->visibility('public')
                             ->directory('projects')
                             ->required(),
 
@@ -49,6 +51,8 @@ class ProjectForm
                     ->schema([
                         FileUpload::make('image')
                             ->image()
+                            ->disk('public')
+                            ->visibility('public')
                             ->directory('projects'),
 
                         Textarea::make('description'),
@@ -60,6 +64,8 @@ class ProjectForm
                     ->schema([
                         FileUpload::make('image')
                             ->image()
+                            ->disk('public')
+                            ->visibility('public')
                             ->directory('projects'),
 
                         Textarea::make('description'),
@@ -71,6 +77,8 @@ class ProjectForm
                     ->schema([
                         FileUpload::make('image')
                             ->image()
+                            ->disk('public')
+                            ->visibility('public')
                             ->directory('projects'),
 
                         Textarea::make('description'),
